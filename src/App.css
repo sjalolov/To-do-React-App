@@ -1,0 +1,112 @@
+.Left{
+    position: absolute;
+    top: 50px;
+    left: 1090px;
+    width: 330px;
+    height: 55px;
+    font-size: 40px;
+    border-radius: 12px;
+    background-color: transparent;
+
+}
+
+.Leftbox{
+    position: absolute;
+    top: 50px;
+    left: 1030px;
+    width: 55px;
+    height: 55px;
+    font-size: 40px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: black
+}
+
+.Add{
+    margin-top: 10px;
+    margin-bottom:100;
+    color: black;
+    border-radius: 12px;
+    padding: auto;
+    position: center;
+    font-size: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 370px;
+    left: 600px;
+    width: 200px;
+    height: 40px;
+    border: 3px solid black;
+}
+
+.Clear{
+    margin-top: 10px;
+    margin-bottom:100;
+    color: black;
+    border-radius: 12px;
+    padding: auto;
+    position: center;
+    font-size: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 370px;
+    left: 820px;
+    width: 200px;
+    height: 40px;
+    border: 3px solid black;
+}
+
+.Text{
+    margin-top: 10px;
+    margin-bottom:100;
+    color: black;
+    border-radius: 12px;
+    padding: auto;
+    position: center;
+    font-size: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    left: 604px;
+    width: 400px;
+    height: 40px;
+    border: 3px solid black;
+}
+
+.Todotext{
+    position: relative;
+    padding-top: 40px;
+    top: 100px;
+    left: 1090px;
+    width: 420px;
+    height: 40px;
+    font: solid;
+    font-size: 40px;
+    overflow-wrap: break-word;
+    overflow:visible;
+
+}
+/* .Textlist{
+    position: relative;
+    top: 100px;
+    left: 1300px;
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+    border-style: border 12px solid;
+    background-color: aqua;
+    color: black
+} */
+input.Textlist {
+    transform: scale(5);
+    margin: 30px;
+  }
+
+body{
+    scroll-behavior: smooth;
+    background-image:url(https://i.postimg.cc/YC0Tbjby/imaggg.png);
+    background-size: cover;
+    position: relative;
+
+}
+

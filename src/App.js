@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList'
+import './App.css';
 import { nanoid } from "nanoid";
+
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -41,12 +43,17 @@ function App() {
   return (
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <input ref={todoNameRef} type="text" />
-      <button onClick={handleAddTodo}>Add Todo</button>
-      <button onClick={handleClearTodos}>Clear Complete</button>
-      <div>{todos.filter(todo => todo.complete).length} left to do</div>
+      <input className="Text" maxlength="22" ref={todoNameRef} type="text" />
+      <button className="Add" onClick={handleAddTodo}>Add Todo</button>
+      <button className="Clear" onClick={handleClearTodos}>Clear Complete</button>
+      <button className="Left"> Completed Tasks</button> 
+      <button className="Leftbox">{todos.filter(todo => todo.complete).length}</button>
     </>
   )
 }
+
+
+
+
 
 export default App;
