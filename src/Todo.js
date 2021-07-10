@@ -6,11 +6,12 @@ export default function Todo({ todo, toggleTodo }) {
   }
   
   return (
-    <div className="Todotext">
+    <div>
       <label>
-        <div > 
+        <div className="Todotext"> 
            <input type="checkbox" classchecked={todo.complete} onChange={handleTodoClick} />
            {todo.name}
+           <span class="w3docs"></span>
         </div>
       </label>
     </div>

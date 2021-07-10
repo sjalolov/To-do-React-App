@@ -42,12 +42,14 @@ function App() {
 
   return (
     <>
+    <section>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <input className="Text" maxlength="22" ref={todoNameRef} type="text" />
       <button className="Add" onClick={handleAddTodo}>Add Todo</button>
       <button className="Clear" onClick={handleClearTodos}>Clear Complete</button>
       <button className="Left"> Completed Tasks</button> 
       <button className="Leftbox">{todos.filter(todo => todo.complete).length}</button>
+      </section>
     </>
   )
 }

@@ -1,102 +1,175 @@
-.Left{
-    position: absolute;
-    top: 50px;
-    left: 1090px;
-    width: 330px;
-    height: 55px;
-    font-size: 40px;
-    border-radius: 12px;
-    background-color: transparent;
-
+* {
+	box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
+:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
+
+
 .Leftbox{
+    padding: 10px;
+    width: 25%;
+    background: #ffffff;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    border-radius:7px;
     position: absolute;
-    top: 50px;
-    left: 1030px;
-    width: 55px;
-    height: 55px;
-    font-size: 40px;
-    border-radius: 12px;
-    background-color: transparent;
-    color: black
+    margin-top: -40px;
+    margin-left: 100px;
+}
+
+/**input box */
+.Text{
+    width: 25%;
+    background: #ffffff;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    border-radius:7px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 100px;
+    cursor: text;
 }
 
 .Add{
-    margin-top: 10px;
-    margin-bottom:100;
-    color: black;
-    border-radius: 12px;
-    padding: auto;
-    position: center;
-    font-size: 20px;
-    background-color: transparent;
+    width: 25%;
+    background: #ffffff;
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    border-radius:7px;
+    margin-left: 100px;
+    margin-top: 60px;
     position: absolute;
-    top: 370px;
-    left: 600px;
-    width: 200px;
-    height: 40px;
-    border: 3px solid black;
 }
-
 .Clear{
-    margin-top: 10px;
-    margin-bottom:100;
-    color: black;
-    border-radius: 12px;
-    padding: auto;
-    position: center;
-    font-size: 20px;
-    background-color: transparent;
+    clear: both;
+    width: 25%;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    float: left;
+    font-size: 12px;
+    border-radius:7px;
     position: absolute;
-    top: 370px;
-    left: 820px;
-    width: 200px;
-    height: 40px;
-    border: 3px solid black;
+    margin-left: 100px;
+    margin-top: 110px;
 }
 
-.Text{
-    margin-top: 10px;
-    margin-bottom:100;
-    color: black;
-    border-radius: 12px;
-    padding: auto;
-    position: center;
-    font-size: 20px;
-    background-color: transparent;
-    position: absolute;
-    top: 300px;
-    left: 604px;
-    width: 400px;
-    height: 40px;
-    border: 3px solid black;
-}
-
-.Todotext{
-    position: relative;
-    padding-top: 40px;
-    top: 100px;
-    left: 1090px;
-    width: 420px;
-    height: 40px;
-    font: solid;
-    font-size: 40px;
-    overflow-wrap: break-word;
-    overflow:visible;
+.Left{
+    width: 25%;
+    background: #ffffff;
+    float: left;
+    text-align: center;
+    font-size: 11px;
+    border-radius:7px;
+    position: fixed;
+    margin-top: 160px;
+    margin-left: 100px;
 
 }
 
-input.Textlist {
-    transform: scale(5);
-    margin: 30px;
+.Add:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
   }
 
-body{
-    scroll-behavior: smooth;
-    background-color: White;
-    background-size: cover;
-    position: relative;
+  .Left:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
 
+.Leftbox:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
+  .Clear:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
+
+  .Todotext:hover {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
+
+.TodoList{
+    position: left;
 }
+
+ /* Hiding the initial checkbox */
+ input[type=checkbox] {
+    visibility: hidden;
+  }
+  /* Creating a custom checkbox based on demand */
+  .w3docs {
+    position: absolute;
+    margin-right: 100px;
+    top: 5px;
+    left: 5%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 7px;
+  }
+  /* Specify the background color to be shown when hovering over checkbox */
+  .Todotext:hover input ~ .w3docs {
+    background-color: #00acca;
+    color: rgb(0, 0, 0);
+  }
+  /* Specify the background color to be shown when checkbox is active */
+  .Todotext input:active ~ .w3docs {
+    background-color: rgb(0, 0, 0);
+  }
+  /* Specify the background color to be shown when checkbox is checked */
+  .Todotext input:checked ~ .w3docs {
+    background-color: #00acca;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It is not be shown when not checked */
+  .w3docs:after {
+    content: "";
+    position: absolute;
+    margin-right: 10%;
+    display: none;
+  }
+  /* Display checkmark when checked */
+  .Todotext input:checked ~ .w3docs:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and 
+  showing only two border to make it look
+  like a tickmark */
+  .Todotext .w3docs:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.Todotext{
+    width: 25%;
+    background: #ffffff;
+    box-shadow: #ffffff;
+    border-radius:7px;
+    cursor: pointer;
+    position: fixed;
+    border: 2px solid rgb(0, 0, 0);
+    height: 5%;
+}
+
 
